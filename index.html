@@ -1944,7 +1944,7 @@ var GLOSSARY_ = [
   { term: 'DSI', full: 'Dallas steatosis index', th: 'คะแนนประเมินไขมันในตับ', topics: ['MASLD'] },
   { term: 'GGT', full: 'Gamma-glutamyl transferase', th: 'ค่าเอนไซม์ตับ', topics: ['MASLD'] },
   { term: 'HU', full: 'Hounsfield unit', th: 'หน่วยความทึบใน CT', topics: ['MASLD'] },
-  { term: 'AUROC', full: 'Area under the ROC curve', th: 'ค่าความแม่นยำของการตรวจ (1.0 = แม่นยำสมบูรณ์)', topics: ['MASLD'] },
+  { term: 'AUROC', full: 'Area under the receiver operating characteristic curve', th: 'ค่าความแม่นยำของการตรวจ (1.0 = แม่นยำสมบูรณ์)', topics: ['MASLD'] },
   { term: 'NPV', full: 'Negative predictive value', th: 'โอกาสที่ไม่มีโรคเมื่อผลตรวจเป็นลบ', topics: ['MASLD'] },
   { term: 'cACLD', full: 'Compensated advanced chronic liver disease', th: 'โรคตับเรื้อรังระยะพังผืดลุกลามถึงตับแข็งระยะต้นที่ยังไม่มีอาการ', topics: ['MASLD'] },
   { term: 'CSPH', full: 'Clinically significant portal hypertension', th: 'ความดันพอร์ทัลสูงที่มีนัยสำคัญ (HVPG ≥10 mmHg)', topics: ['MASLD'] },
@@ -1953,8 +1953,8 @@ var GLOSSARY_ = [
   { term: 'EVL', full: 'Endoscopic variceal ligation', th: 'การรัดหลอดเลือดขอดผ่านกล้อง', topics: ['MASLD'] },
   { term: 'HCC', full: 'Hepatocellular carcinoma', th: 'มะเร็งเซลล์ตับ', topics: ['MASLD'] },
   { term: 'AFP', full: 'Alpha-fetoprotein', th: 'สารบ่งชี้มะเร็งตับในเลือด', topics: ['MASLD'] },
-  { term: 'MELD', full: 'Model for End-Stage Liver Disease score', th: 'คะแนนความรุนแรงของโรคตับ', topics: ['MASLD'] },
-  { term: 'GIP', full: 'Glucose-dependent insulinotropic polypeptide', th: '', topics: ['MASLD'] },
+  { term: 'MELD', full: 'Model for End-Stage Liver Disease', th: 'คะแนนความรุนแรงของโรคตับ', topics: ['MASLD'] },
+  { term: 'GIP', full: 'Glucose-dependent insulinotropic polypeptide (gastric inhibitory polypeptide)', th: 'ฮอร์โมนอินครีตินจากลำไส้ (แนวทางใช้ทั้งสองชื่อ)', topics: ['MASLD'] },
   { term: 'MACE', full: 'Major adverse cardiovascular events', th: '', topics: ['MASLD'] },
   { term: 'CVOT', full: 'Cardiovascular outcome trial', th: '', topics: ['MASLD'] },
   { term: 'SCORE2', full: 'Systematic Coronary Risk Evaluation 2', th: 'คะแนนความเสี่ยงโรคหัวใจของยุโรป', topics: ['MASLD'] },
@@ -4085,6 +4085,24 @@ var SEED_REFERENCES_ = [
     document_section: 'Page numbers are the printed page numbers of the book (PDF page − 3). Grades are written as (quality · strength) as the book prints them; consensus vote percentages are not repeated. ' +
       'Table 6 uses its own A/B/C evidence levels, which are not GRADE.',
     evidence_grading_system: 'GRADE: คุณภาพหลักฐาน ดี / ปานกลาง / ต่ำ / ต่ำมาก; น้ำหนักคำแนะนำ แนะนำอย่างยิ่ง / แนะนำแบบมีเงื่อนไข', status: 'draft' },
+  { source_id: 'SRC-EASL-MASLD-2024', organization: 'European Association for the Study of the Liver, EASD, EASO', region: 'international',
+    guideline_title: 'EASL-EASD-EASO Clinical Practice Guidelines on the management of metabolic dysfunction-associated steatotic liver disease (MASLD)',
+    publication_year: 2024, edition_or_version: 'J Hepatol 2024;81:492–542; Obes Facts 2024;17:374–443',
+    url: 'https://karger.com/ofa/article/17/4/374/906475/EASL-EASD-EASO-Clinical-Practice-Guidelines-on-the', document_id: '',
+    document_section: 'International trend only, used to compare points where the THASL 2569 book is internally inconsistent (LSM 8 kPa, HCC interval). Read via a summary of the published article, not checked line by line.',
+    evidence_grading_system: 'Not checked (only the points listed above were compared)', status: 'draft' },
+  { source_id: 'SRC-AASLD-NAFLD-2023', organization: 'American Association for the Study of Liver Diseases (Rinella ME, et al.)', region: 'international',
+    guideline_title: 'AASLD Practice Guidance on the clinical assessment and management of nonalcoholic fatty liver disease',
+    publication_year: 2023, edition_or_version: 'Hepatology 2023 (accepted manuscript read), doi:10.1097/HEP.0000000000000323',
+    url: 'https://pubmed.ncbi.nlm.nih.gov/36727674/', document_id: 'PMID 36727674',
+    document_section: 'International trend only: FIB-4 bands, VCTE 8/12 kPa, HCC surveillance in cirrhosis, guidance statement 28 (metformin not a NASH treatment).',
+    evidence_grading_system: 'Guidance statements (not graded)', status: 'draft' },
+  { source_id: 'SRC-LEE-HSI-2010', organization: 'Lee JH, Kim D, Kim HJ, et al.', region: 'international',
+    guideline_title: 'Hepatic steatosis index: a simple screening tool reflecting nonalcoholic fatty liver disease',
+    publication_year: 2010, edition_or_version: 'Dig Liver Dis 2010;42(7):503–508',
+    url: 'https://s-space.snu.ac.kr/handle/10371/76487', document_id: '',
+    document_section: 'Abstract read: HSI = 8 × (ALT/AST) + BMI (+2 female, +2 diabetes); <30 rules out, >36 rules in.',
+    evidence_grading_system: 'Not graded (derivation study)', status: 'draft' },
   { source_id: 'SRC-STERLING-FIB4-2006', organization: 'Sterling RK, Lissen E, Clumeck N, et al. (APRICOT Clinical Investigators)', region: 'international',
     guideline_title: 'Development of a simple noninvasive index to predict significant fibrosis in patients with HIV/HCV coinfection',
     publication_year: 2006, edition_or_version: 'Hepatology 2006;43(6):1317–1325',
@@ -5818,7 +5836,8 @@ function seedRecommendations_() {
       '| FLI | BMI, รอบเอว, TG, GGT | <30 | ≥60 |\n' +
       '| HSI | BMI, อัตราส่วน AST/ALT, เบาหวาน, เพศ | <30 | >36 |\n' +
       '| DSI | ALT, BMI, อายุ, เพศ, TG, เบาหวาน, ความดัน, เชื้อชาติ | <20% | 50% |\n\n' +
-      'หมายเหตุ: HSI ข้อความหน้า 34 เขียน “อัตราส่วน AST ต่อ ALT” ส่วนตารางที่ 3 เขียน “ALT/AST ratio”; ข้อมูลความแม่นยำในประชากรไทยยังจำกัด',
+      'หมายเหตุ: HSI ข้อความหน้า 34 เขียน “อัตราส่วน AST ต่อ ALT” ส่วนตารางที่ 3 เขียน “ALT/AST ratio”; ข้อมูลความแม่นยำในประชากรไทยยังจำกัด\n\n' +
+      '**สูตรต้นฉบับ HSI (Lee 2010):** 8 × (**ALT/AST**) + BMI (+2 ถ้าเป็นผู้หญิง, +2 ถ้าเป็นเบาหวาน); <30 ตัดออก, >36 วินิจฉัย ตรงกับตารางที่ 3',
       w(ML, { sub: 'Steatosis scores', loc: 'หน้า 34–36 · ตารางที่ 3' })),
     seedRec_('REC-MASLD-0105', 'MASLD', 'diagnosis', 5, 'key_point',
       '**ประเมินพังผืดด้วย FIB-4 เป็นลำดับแรก** (ดี · อย่างยิ่ง)\n\n' +
@@ -5838,7 +5857,9 @@ function seedRecommendations_() {
       '| ELF test | <7.7 | ≥9.8 | ราคาสูง |\n' +
       '| VCTE (LSM) | <8.0 kPa | ≥10–12 kPa | คลาดเคลื่อนเมื่อตับอักเสบรุนแรง ท่อน้ำดีอุดตัน หรือมีน้ำในช่องท้อง |\n' +
       '| SWE | <8.0 kPa | ≥10.5–12 kPa | ค่าตัดแปรผันตามยี่ห้อและรุ่น |\n' +
-      '| MRE | <2.55 kPa | ≥3.63 kPa | ราคาสูงมาก |',
+      '| MRE | <2.55 kPa | ≥3.63 kPa | ราคาสูงมาก |\n\n' +
+      'หมายเหตุ: ตารางนี้เขียน FIB-4 rule-in ≥2.67 ส่วนข้อเสนอแนะ 2.1 และรูปที่ 2 เขียน >2.67' +
+      '\n\n**แนวทางต่างประเทศ (International, ใช้เทียบเท่านั้น):** AASLD 2023 เขียน high risk **>2.67** (intermediate 1.3–2.67)',
       w(ML, { sub: 'Non-invasive fibrosis tests', loc: 'หน้า 38–39 · ตารางที่ 4' })),
     seedRec_('REC-MASLD-0107', 'MASLD', 'diagnosis', 7, 'standard',
       '**ประเมินความเสี่ยงโรคหัวใจและหลอดเลือดทุกราย** ด้วยระบบคะแนน เช่น **Thai CV risk score** (ปานกลาง · มีเงื่อนไข)\n' +
@@ -5883,7 +5904,7 @@ function seedRecommendations_() {
       '- แอโรบิกสม่ำเสมอ ระดับปานกลางสะสม **≥150 นาที/สัปดาห์** หรือระดับหนัก **≥75 นาที/สัปดาห์** (ดี · มีเงื่อนไข)\n' +
       '- แรงต้าน **2–3 ครั้ง/สัปดาห์** ร่วมกับแอโรบิก หรือเป็นการฝึกหลักในบางราย (ปานกลาง · มีเงื่อนไข)\n' +
       '- ลดการนั่งนิ่ง ลุกยืนหรือเดินสั้นๆ **ทุก 30–60 นาที** (ปานกลาง · มีเงื่อนไข)\n\n' +
-      'หมายเหตุ: คุณภาพหลักฐานของข้อ 3.3.3 (นั่งนิ่ง) หน้า 8 พิมพ์ “ปานกลาง” แต่หน้า 50 พิมพ์ “ดี”',
+      'หมายเหตุ: คุณภาพหลักฐานของข้อ 3.3.3 (นั่งนิ่ง) หน้า 8 พิมพ์ “ปานกลาง” แต่หน้า 50 พิมพ์ “ดี” (ไม่มีแหล่งภายนอกที่ใช้ตัดสินได้ ต้องถามผู้จัดทำ)',
       w(ML, { sub: 'Physical activity', loc: 'หน้า 50–51 · ข้อเสนอแนะ 3.3.1–3.3.3' })),
     seedRec_('REC-MASLD-0304', 'MASLD', 'algorithm', 4, 'standard',
       '**ยารักษาโรคร่วมในผู้ป่วย MASLD** (รูปที่ 3)\n\n' +
@@ -5894,7 +5915,9 @@ function seedRecommendations_() {
       '| เบาหวานชนิดที่ 2 | GLP-1 RA หรือ dual GIP/GLP-1 RA; pioglitazone | SGLT2 inhibitors, metformin (eGFR >30), insulin |\n\n' +
       '- Statins ปลอดภัยใน MASLD แม้เอนไซม์ตับสูงเล็กน้อย\n' +
       '- ACEI/ARB เป็นทางเลือกแรกเมื่อมีเบาหวานหรือโรคไต; beta-blocker ไม่ใช่ทางเลือกแรกของความดันในผู้ที่ยังไม่มีตับแข็ง\n' +
-      '- หมายเหตุ: ข้อความหน้า 53 ระบุ metformin เป็น “ยาตั้งต้นที่แนะนำ” ในเบาหวานชนิดที่ 2 ที่ไม่มีข้อห้าม แต่รูปที่ 3 จัดไว้เป็นลำดับถัดมา',
+      '- หมายเหตุ: ข้อความหน้า 53 ระบุ metformin เป็น “ยาตั้งต้นที่แนะนำ” ในเบาหวานชนิดที่ 2 ที่ไม่มีข้อห้าม แต่รูปที่ 3 จัดไว้เป็นลำดับถัดมา\n' +
+      '- แนวทางเบาหวานไทย พ.ศ. 2566 (หมวด DM ในแอปนี้) ให้ metformin เป็นยาตัวแรกเมื่อยังไม่มีโรคร่วม (โรคหัวใจและหลอดเลือด หัวใจล้มเหลว โรคไต)' +
+      '\n\n**แนวทางต่างประเทศ (International, ใช้เทียบเท่านั้น):** AASLD 2023: metformin **ไม่ใช่ยารักษา NASH** เพราะไม่ทำให้พยาธิสภาพตับดีขึ้น (ไม่ได้บอกว่าห้ามใช้รักษาเบาหวาน)',
       w(ML, { sub: 'Drugs for comorbidities', loc: 'หน้า 52–55 · รูปที่ 3' })),
     seedRec_('REC-MASLD-0305', 'MASLD', 'algorithm', 5, 'standard',
       '**ยาลดน้ำหนัก** (ตารางที่ 6)\n\n' +
@@ -5961,13 +5984,14 @@ function seedRecommendations_() {
       '**มี CSPH: เริ่ม non-selective beta-blocker** (ดี · อย่างยิ่ง)\n' +
       '- เลือก **carvedilol เป็นทางเลือกแรก** (หรือ propranolol) เพื่อป้องกัน first decompensation\n' +
       '- มีข้อห้ามหรือผลข้างเคียง: ส่องกล้องทางเดินอาหารส่วนต้น และทำ endoscopic variceal ligation ถ้าพบหลอดเลือดขอดหลอดอาหารขนาดใหญ่\n\n' +
-      'หมายเหตุ: หน้า 10 ใช้เลขข้อ 5.2.2 ส่วนหน้า 66 ใช้เลขข้อ 5.1.2',
+      'หมายเหตุ: หน้า 10 ใช้เลขข้อ 5.2.2 ส่วนหน้า 66 ใช้เลขข้อ 5.1.2 (เนื้อหาตรงกัน ต่างแค่เลขข้อ; ข้อนี้อยู่ใต้ CQ 5.1 จึงน่าจะเป็น 5.1.2)',
       w(ML, { sub: 'NSBB for CSPH', loc: 'หน้า 66, 69 · ข้อเสนอแนะ 5.1.2' })),
     seedRec_('REC-MASLD-0504', 'MASLD', 'monitoring', 4, 'key_point',
       '**คัดกรองมะเร็งตับ (HCC) ในผู้ป่วยตับแข็ง** ด้วย **อัลตราซาวนด์ร่วมกับ AFP ทุก 6–12 เดือน** (ดี · อย่างยิ่ง)\n' +
       '- อัลตราซาวนด์ร่วม AFP ไวต่อ HCC ระยะต้น 63% เทียบกับอัลตราซาวนด์อย่างเดียว 45%\n' +
       '- ไม่มีตับแข็ง: อุบัติการณ์ HCC 0.03 ต่อ 100 ประชากร-ปี; ตับแข็ง: 3.78 ต่อ 100 ประชากร-ปี\n\n' +
-      'หมายเหตุ: แผนผังหน้า 4 เขียน “ทุก 6 เดือน” ส่วนข้อเสนอแนะ 5.2 เขียน “ทุก 6–12 เดือน”',
+      'หมายเหตุ: แผนผังหน้า 4 เขียน “ทุก 6 เดือน” ส่วนข้อเสนอแนะ 5.2 เขียน “ทุก 6–12 เดือน”' +
+      '\n\n**แนวทางต่างประเทศ (International, ใช้เทียบเท่านั้น):** EASL-EASD-EASO 2024: อัลตราซาวนด์**ทุก 6 เดือน** เป็นวิธีหลัก ตรวจ AFP ร่วมได้ในผู้เสี่ยงสูง; AASLD 2023: ตับแข็งตรวจคัดกรอง HCC **ปีละ 2 ครั้ง**',
       w(ML, { sub: 'HCC surveillance', loc: 'หน้า 69–70 · ข้อเสนอแนะ 5.2' })),
 
     seedRec_('REC-MASLD-0701', 'MASLD', 'referral', 1, 'key_point',
@@ -5975,7 +5999,8 @@ function seedRecommendations_() {
       '- FIB-4 **>2.67** หรือ LSM จาก VCTE **>8 kPa** (ดี · อย่างยิ่ง)\n' +
       '- FIB-4 1.3–2.67 และ LSM ≥8 kPa หรือไม่มี VCTE (ดี · มีเงื่อนไข)\n' +
       '- ผู้เชี่ยวชาญจะหาสาเหตุโรคตับอื่น (เช่น ไวรัสตับอักเสบบีหรือซี, autoimmune hepatitis) และประเมินตับแข็ง\n\n' +
-      'หมายเหตุ: ข้อเสนอแนะ 2.3 เขียน “>8 kPa” แต่รูปที่ 2 และข้อความหน้า 41 เขียน “≥8 kPa”',
+      'หมายเหตุ: ข้อเสนอแนะ 2.3 เขียน “>8 kPa” แต่รูปที่ 2 และข้อความหน้า 41 เขียน “≥8 kPa”' +
+      '\n\n**แนวทางต่างประเทศ (International, ใช้เทียบเท่านั้น):** AASLD 2023: LSM **น้อยกว่า 8 kPa** ใช้ตัด advanced fibrosis, 8–12 kPa อาจมี fibrotic NASH, มากกว่า 12 kPa โอกาสสูง; EASL-EASD-EASO 2024 แผนภูมิแบ่ง <8.0 กับ ≥8.0 kPa (ทั้งสองแนวทางให้ 8 kPa พอดีอยู่ฝั่งเสี่ยง)',
       w(ML, { sub: 'Refer to a specialist', loc: 'หน้า 41–43, 66–67 · ข้อเสนอแนะ 2.2.2, 2.3', ov: true })),
     seedRec_('REC-MASLD-0702', 'MASLD', 'referral', 2, 'standard',
       '**ส่งต่อเพื่อพิจารณาปลูกถ่ายตับ** เมื่อตับแข็งระยะ decompensation หรือมี HCC ระยะต้น (ดี · อย่างยิ่ง)\n' +
@@ -6524,7 +6549,7 @@ function seedTopicDrugs_() {
     'THYROID/DRG-0046': '**ไทรอยด์เป็นพิษ:** ใช้แทน beta-blocker เมื่อมีข้อห้าม เช่น asthma หรือ Raynaud’s phenomenon (TES 2568 หน้า 50) แนวทางไม่ระบุขนาด\n\nขนาดด้านบนเป็นขนาดสำหรับความดันโลหิตสูง',
     'THYROID/DRG-0045': '**ไทรอยด์เป็นพิษ:** ใช้แทน beta-blocker เมื่อมีข้อห้าม เช่น asthma หรือ Raynaud’s phenomenon (TES 2568 หน้า 50) แนวทางไม่ระบุขนาด\n\nขนาดด้านบนเป็นขนาดสำหรับความดันโลหิตสูง',
     'MASLD/DRG-0117': 'ไม่มีในบัญชียา รพ. (มีเฉพาะ OZEMPIC 1 มก. และ RYBELSUS ซึ่งเป็นขนาดสำหรับเบาหวาน)',
-    'MASLD/DRG-0118': 'รายการใน รพ. เป็น Vitamin E 400 ยูนิต แคปซูล: บัญชียาไม่ระบุว่าเป็น natural vitamin E หรือไม่',
+    'MASLD/DRG-0118': '**ไม่ทราบ**ว่า Vitamin E 400 ยูนิต แคปซูลใน รพ. เป็น natural vitamin E หรือไม่ (บัญชียาไม่ได้ระบุ)',
     'MASLD/DRG-0077': '**MASH ที่ไม่มีตับแข็ง โดยเฉพาะเบาหวานชนิดที่ 2: 15–30 มก./วัน** (THASL 2569 ข้อเสนอแนะ 4.1.3)\n\nน้ำหนักเพิ่มประมาณ 2.7% เทียบยาหลอก บวมน้ำ',
     'MASLD/DRG-0059': '**ตับแข็งที่มี CSPH:** NSBB ทางเลือกแรก (THASL 2569 หน้า 69) แนวทางไม่ระบุขนาด\n\nขนาดด้านบนเป็นขนาดสำหรับความดันโลหิตสูง',
     'MASLD/DRG-0058': '**ตับแข็งที่มี CSPH:** NSBB ทางเลือกรองจาก carvedilol (THASL 2569 หน้า 69) แนวทางไม่ระบุขนาด\n\nขนาดด้านบนเป็นขนาดสำหรับความดันโลหิตสูง'
