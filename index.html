@@ -1966,6 +1966,10 @@ var GLOSSARY_ = [
   { term: 'HR', full: 'Hazard ratio', th: '', topics: ['MASLD'] },
   { term: 'OATP1B1', aliases: ['OATP1B3', 'OATP1B1/1B3'], full: 'Organic anion transporting polypeptide 1B1 (and 1B3)', th: 'ตัวขนส่งยาเข้าเซลล์ตับ ยาที่ยับยั้งตัวนี้ (เช่น cyclosporine) เพิ่มระดับ resmetirom', topics: ['MASLD'] },
   { term: 'ANTICIPATE', aliases: ['ANTICIPATE-NASH'], full: 'ANTICIPATE model', th: 'แบบจำลองทำนาย CSPH จาก LSM และเกล็ดเลือด (ANTICIPATE-NASH เพิ่ม BMI)', topics: ['MASLD'] },
+  { term: 'NASH CRN', aliases: ['CRN'], full: 'Nonalcoholic Steatohepatitis Clinical Research Network', th: 'เครือข่ายวิจัย NASH ของ NIDDK สหรัฐฯ ผู้กำหนดระบบให้คะแนนชิ้นเนื้อตับ (ระยะพังผืด F0–F4)', topics: ['MASLD'] },
+  { term: 'AASLD', full: 'American Association for the Study of Liver Diseases', th: 'สมาคมโรคตับแห่งสหรัฐอเมริกา', topics: ['MASLD'] },
+  { term: 'EASL', aliases: ['EASL-EASD-EASO'], full: 'European Association for the Study of the Liver (with EASD, diabetes; EASO, obesity)', th: 'สมาคมโรคตับแห่งยุโรป (แนวทาง MASLD 2024 ออกร่วมกับสมาคมเบาหวานและโรคอ้วนแห่งยุโรป)', topics: ['MASLD'] },
+  { term: 'PMID', full: 'PubMed identifier', th: 'เลขประจำบทความในฐานข้อมูล PubMed', topics: ['MASLD'] },
   // ---- 0.14.0: thyroid module (TES 2568)
   { term: 'TES', full: 'Endocrine Society of Thailand', th: 'สมาคมต่อมไร้ท่อแห่งประเทศไทย ผู้จัดทำแนวทางไทรอยด์ พ.ศ. 2568', topics: ['THYROID'] },
   { term: 'TSH', full: 'Thyroid-stimulating hormone', th: 'ฮอร์โมนกระตุ้นต่อมไทรอยด์จากต่อมใต้สมอง ใช้คัดกรองการทำงานของต่อมไทรอยด์', topics: ['THYROID'] },
@@ -4109,6 +4113,12 @@ var SEED_REFERENCES_ = [
     url: 'https://pubmed.ncbi.nlm.nih.gov/16729309/', document_id: 'PMID 16729309',
     document_section: 'Original FIB-4 equation: age (years) × AST (U/L) ÷ (platelets (10⁹/L) × √ALT (U/L)). Abstract and the University of Washington FIB-4 calculator were read, not the full article; the same equation is printed in THASL 2569 Figure 2 (p.42).',
     evidence_grading_system: 'Not graded (derivation study)', status: 'draft' },
+  { source_id: 'SRC-KLEINER-NASHCRN-2005', organization: 'Kleiner DE, Brunt EM, Van Natta M, et al. (NASH Clinical Research Network)', region: 'international',
+    guideline_title: 'Design and validation of a histological scoring system for nonalcoholic fatty liver disease',
+    publication_year: 2005, edition_or_version: 'Hepatology 2005;41(6):1313–',
+    url: 'https://pubmed.ncbi.nlm.nih.gov/15915461/', document_id: 'PMID 15915461; DOI 10.1002/hep.20701',
+    document_section: 'NASH CRN fibrosis stage 0–4 (1A/1B/1C) used for the comparison table on the MASLD definitions card. Stage wording checked against the NIDDK LABS-2 pathology form; PubMed record read, not the full article. End page not verified.',
+    evidence_grading_system: 'Not graded (histology scoring system)', status: 'draft' },
   { source_id: 'SRC-DEVINE-1974', organization: 'Devine BJ', region: 'international',
     guideline_title: 'Gentamicin therapy (Devine ideal body weight equation)',
     publication_year: 1974, edition_or_version: 'Drug Intell Clin Pharm 1974;8:650–655',
@@ -5787,10 +5797,19 @@ function seedRecommendations_() {
       '**คำจำกัดความ**\n' +
       '- **MASLD:** ไขมันสะสมในตับ >5% ของเซลล์ตับ ที่สัมพันธ์กับความผิดปกติทางเมแทบอลิซึม (เดิมเรียก NAFLD)\n' +
       '- **MASH:** ตับอักเสบในบริบท MASLD (steatosis, lobular inflammation, hepatocellular ballooning)\n' +
-      '- **Significant fibrosis** = F2–F4; **advanced fibrosis** = F3–F4 (รวมตับแข็ง)\n\n' +
+      '- **Significant fibrosis** = F2–F4; **advanced fibrosis** = F3–F4 (รวมตับแข็ง)\n' +
+      '- **ระยะพังผืด F0–F4:** F3 = พังผืดตับระยะลุกลาม (advanced fibrosis), F4 = ตับแข็ง; โดยเฉลี่ยพังผืดเพิ่ม 1 ระยะทุก 14.3 ปีใน MASLD และทุก 7.1 ปีใน MASH (หน้า 27)\n\n' +
+      '**ระยะพังผืดจากชิ้นเนื้อตับ (NASH CRN; Kleiner 2005 · แนวทางต่างประเทศ ไม่ได้มาจากเล่มไทย)**\n\n' +
+      '| ระยะ | ลักษณะทางพยาธิวิทยา |\n|---|---|\n' +
+      '| F0 | ไม่มีพังผืด |\n' +
+      '| F1 | พังผืดรอบ sinusoid (perisinusoidal) **หรือ** รอบ portal (periportal) อย่างใดอย่างหนึ่ง: 1A perisinusoidal เล็กน้อย, 1B perisinusoidal ปานกลาง, 1C periportal อย่างเดียว |\n' +
+      '| F2 | perisinusoidal **และ** periportal |\n' +
+      '| F3 | bridging fibrosis |\n' +
+      '| F4 | ตับแข็ง (cirrhosis) |\n\n' +
+      '**แยก MASLD / MetALD / ALD ตามปริมาณแอลกอฮอล์** (หน้า 23–24)\n\n' +
       '| แอลกอฮอล์ (กรัม/วัน) | ผู้หญิง | ผู้ชาย |\n|---|---|---|\n' +
       '| MASLD | <20 | <30 |\n| MetALD (MASLD with increased alcohol intake) | 20–50 | 30–60 |\n| ALD (ไม่คำนึงถึงปัจจัยเมแทบอลิก) | >50 | >60 |',
-      w(ML, { sub: 'Definitions', loc: 'หน้า 23–24 · คำจำกัดความ' })),
+      w(ML, { sub: 'Definitions', loc: 'หน้า 23–24, 27 · คำจำกัดความ; ตาราง NASH CRN จาก Kleiner 2005 (PMID 15915461)' })),
     seedRec_('REC-MASLD-0003', 'MASLD', 'overview', 3, 'standard',
       '**ทำไมต้องหาพังผืด**\n' +
       '- ความชุก MASLD ในไทย 17.8–22.8% (สำรวจระดับประเทศ พ.ศ. 2563 และ 2565) และ 45.2–50.4% ในกลุ่มตรวจสุขภาพที่มีโรคร่วมทางเมแทบอลิก\n' +
